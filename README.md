@@ -12,7 +12,7 @@ comunnity.
 > `Language: python`
 >
 
-## team:
+## Team:
 * Gabriel Grinspun
 * Gabriel de Assis 
 * Luis Gustavo Bulhões
