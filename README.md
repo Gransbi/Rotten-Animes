@@ -7,17 +7,17 @@ rate Animes and Mangas similar to the Rotten Tomatoes website, that means review
 pinpoint wich episodes are fillers or not, and also discuss with other members of the
 comunnity.
 ```
-*[Rotten tomatoes](https://www.rottentomatoes.com/)
+* [Rotten tomatoes](https://www.rottentomatoes.com/)
 
 > `Language: python`
 >
 
-*team:
--Gabriel Grinspun
--Gabriel de Assis 
--Luis Gustavo Bulhões
--José Reginaldo
--Leonardo Cavalcanti
+## team:
+* Gabriel Grinspun
+* Gabriel de Assis 
+* Luis Gustavo Bulhões
+* José Reginaldo
+* Leonardo Cavalcanti
 ***
 
 If you want to help us or Provide some knologe please [contact us](gmail.com/gsg@cesar.school)
