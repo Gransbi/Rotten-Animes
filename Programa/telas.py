@@ -1,7 +1,7 @@
 class Tela:
 
     def tela_inicial():
-        print("")
+        print("BOM DIA E BOA TARDE")
 
 
 
