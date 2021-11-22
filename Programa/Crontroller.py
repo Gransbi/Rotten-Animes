@@ -1,3 +1,10 @@
+class Usurio_comun:
+	def __init__(self,login,senha,apelido,adiministrador = False):
+		self.login = login
+		self.senha = senha
+		self.apelido = apelido
+		self.adiministrador = adiministrador
+    
 class Anime:
 
 
@@ -27,5 +34,3 @@ class Anime:
             
 #Naruto = Anime("terminado", 500, "Masashi Kishimoto", "boruto, Naruto the Last, Naruto shippuden", "resenha grande demais para escrever",
 #10, "5 estrelas")
-
-
