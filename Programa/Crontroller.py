@@ -25,8 +25,7 @@ class Anime:
 
         
             
-Naruto = Anime("terminado", 500, "Masashi Kishimoto", "boruto, Naruto the Last, Naruto shippuden", "resenha grande demais para escrever",
-10, "5 estrelas")
+#Naruto = Anime("terminado", 500, "Masashi Kishimoto", "boruto, Naruto the Last, Naruto shippuden", "resenha grande demais para escrever",
+#10, "5 estrelas")
 
-print("digite: ")
-nome = input()
+
