@@ -4,12 +4,9 @@ import tratamento
 
 # Barra superior 
 # 		1-Home
-# 		2-Animes
-# 		3-Filmes 
-# 		4-Fila
-# 		5-Pesquisa
-# 		6-login
-# 
+# 		2-Login
+# 		3-Anime naruto
+# 		4-Lista de animes 
 # 	Home
 # 		7-Em alta
 # 		8-Ultimo adicionados
@@ -43,18 +40,16 @@ while True:
 				break
 
 	if (int(comando) == 2):
-		pass
+		telas.Tela.tela_login
+		while True:
+			login = str(input(""))
+			
+			senha = str(input(""))
 
 	if (int(comando) == 3):
-		pass
+		telas.Tela.exposicao_anime
 
 	if (int(comando) == 4):
-		pass
-
-	if (int(comando) == 5):
-		pass
-
-	if (int(comando) == 6):
 		pass
 
 
