@@ -8,5 +8,12 @@ class Usurio:
 		self.adiministrador = adiministrador
 
         
-    	def conectar(self):
-        	pass
+    	def conectar_on(self,login,senha,banco):
+            if(login in banco.itens()):
+                if (banco.get(login) == senha):
+                    pass
+                else:
+                    print("Sua senha esta invalida.")
+            else:
+                print("Seu login não existe.")
+                return False
