@@ -1,7 +1,8 @@
+import telas
+import controller
 
-import telas 
-import tratamento
-
+telas = telas.Tela
+tratamento = controller.Tratamento
 # Barra superior 
 # 		1-Home
 # 		2-Login
@@ -13,19 +14,6 @@ import tratamento
 # 	Animes
 # 		7-Lista de Generos
 # 		8...Animes por ordem alfabetica
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 # 
 comando = '1'
 
@@ -43,8 +31,8 @@ while True:
 		telas.Tela.tela_login
 		while True:
 			login = str(input(""))
-			
 			senha = str(input(""))
+
 
 	if (int(comando) == 3):
 		telas.Tela.exposicao_anime
