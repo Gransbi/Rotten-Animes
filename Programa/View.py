@@ -1,6 +1,14 @@
+import telas
+import controller
 
-import telas 
-import tratamento
+telas = telas.Tela
+tratamento = controller.Tratamento
+usuario = controller.Usurio
+
+# Armazenamento de dados em csv
+# 
+# 
+
 
 # Barra superior 
 # 		1-Home
@@ -14,24 +22,11 @@ import tratamento
 # 		7-Lista de Generos
 # 		8...Animes por ordem alfabetica
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 comando = '1'
 
 while True:
 	if (int(comando) == 1):
-		telas.Tela.tela_inicial
+		telas.tela_inicial
 
 		while True:
 			comando = str(input(""))
@@ -43,11 +38,19 @@ while True:
 		telas.Tela.tela_login
 		while True:
 			login = str(input(""))
-			
 			senha = str(input(""))
+			check_conctar = usuario.conectar_on(login,senha,banco)
+			if (check_conctar == True):
+				break
+			else:
+				tentar_novamente = int(input("Quer tentar novamente ? \nSim (1) \nNão (2)"))
+				if (tentar_novamente == 1):
+					pass
+				else:
+					break
 
 	if (int(comando) == 3):
-		telas.Tela.exposicao_anime
+		telas.exposicao_anime
 
 	if (int(comando) == 4):
 		pass
