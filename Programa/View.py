@@ -15,6 +15,7 @@ usuario = controller.Usurio
 # 		2-Login
 # 		3-Anime naruto
 # 		4-Lista de animes 
+# 		5-Pesquisa
 # 	Home
 # 		7-Em alta
 # 		8-Ultimo adicionados
@@ -25,8 +26,11 @@ usuario = controller.Usurio
 comando = '1'
 
 while True:
+
+
 	if (int(comando) == 1):
 		telas.tela_inicial
+
 
 		while True:
 			comando = str(input(""))
@@ -34,6 +38,17 @@ while True:
 			if (verificação == True):
 				break
 
+
+		if (int(comando) == 6):
+			pass
+		if (int(comando) == 7):
+			pass
+		if (int(comando) == 8):
+			pass
+		if (int(comando) == 9):
+			pass
+
+		
 	if (int(comando) == 2):
 		telas.Tela.tela_login
 		while True:
@@ -47,10 +62,25 @@ while True:
 				if (tentar_novamente == 1):
 					pass
 				else:
+					comando = 1
 					break
+
 
 	if (int(comando) == 3):
 		telas.exposicao_anime
+
+
+		if (usuario.validar("coneccao") == True):
+			while True:
+				avaliacao = str(input(""))
+				verificação = tratamento.avaliacao(avaliacao, 0, 5)
+				if (verificação == True):
+					break
+			
+
+			if (usuario.validar("adiministrador") == True):
+				pass
+		
 
 	if (int(comando) == 4):
 		pass
