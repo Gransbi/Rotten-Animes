@@ -10,7 +10,10 @@ class Anime:
         self.temporadas = temporadas
         self.avaliacao = avaliacao
 
+        def avaliar(self, avaliacao):
+                avaliacao = str(input())
         
+
 
         def acesso(self, status_usuario):
                 self.status_usuario = status_usuario
@@ -23,8 +26,7 @@ class Anime:
                 if self.print_resenha:
                         print(self.resenha)
 
-        def trending_animes():
-                pass
+        
 
             
 #Naruto = Anime("terminado", 500, "Masashi Kishimoto", "boruto, Naruto the Last, Naruto shippuden", "resenha grande demais para escrever",
@@ -64,3 +66,6 @@ class Tratamento:
 
                 else:
                         return False
+
+
+
