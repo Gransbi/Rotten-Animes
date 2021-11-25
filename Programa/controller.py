@@ -12,16 +12,19 @@ class Anime:
 
         
 
-    def acesso(self, status_usuario):
-        self.status_usuario = status_usuario
-        if status_usuario == True:
-            print("Adminitrador")
-        else:
-            print("mambro comum")
+        def acesso(self, status_usuario):
+                self.status_usuario = status_usuario
+                if status_usuario == True:
+                   print("Adminitrador")
+                else:
+                        print("mambro comum")
     
-    def print_resenha(self, opção):
-        if self.print_resenha:
-            print(self.resenha)
+        def print_resenha(self, opção):
+                if self.print_resenha:
+                        print(self.resenha)
+
+        def trending_animes():
+                pass
 
             
 #Naruto = Anime("terminado", 500, "Masashi Kishimoto", "boruto, Naruto the Last, Naruto shippuden", "resenha grande demais para escrever",
