@@ -16,6 +16,8 @@ class Leitura:
 
 
 	def animes_de_dados():
-		arquivo = open("anime_de_dados/animes.txt", "r")
+		arquivo = open("animes.csv", "r")
 		for line in arquivo:
 			pass
+
+		arquivo.close()
