@@ -48,6 +48,7 @@ class Episodeo:
 		if (Usurio.validar("adiministrador") == True):
 			pass
 
+
 class Usurio:
 
 
