@@ -86,4 +86,8 @@ while True:
 		pass
 
 
+	if (((usuario.validar("coneccao") and usuario.validar("adiministrador")) == True) and int(comando) == 5):
+		# Cadastrar anime
+		pass
+
 	
