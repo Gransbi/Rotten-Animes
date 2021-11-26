@@ -1,9 +1,11 @@
 import telas
 import controller
+import Model
 
 telas = telas.Tela
 tratamento = controller.Tratamento
 usuario = controller.Usurio
+leitura = Model.Leitura
 
 # Armazenamento de dados em csv
 # 
@@ -24,6 +26,8 @@ usuario = controller.Usurio
 # 		8...Animes por ordem alfabetica
 # 
 comando = '1'
+banco = {}
+banco = leitura.animes_de_dados
 
 while True:
 
@@ -83,7 +87,9 @@ while True:
 		
 
 	if (int(comando) == 4):
-		pass
+		pesquisa = str(input(""))
+		if (pesquisa in banco.itens()):
+			pass
 
 
 	if (((usuario.validar("coneccao") and usuario.validar("adiministrador")) == True) and int(comando) == 5):

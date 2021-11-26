@@ -6,14 +6,6 @@ class Cadastrar:
 		arquivo.write(escrever)
 		arquivo.close()
 
-
-	def episodeo():
-		pass
-
-
-	def usuario():
-		pass
-
 class Leitura:
 
 
