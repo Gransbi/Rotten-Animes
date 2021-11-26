@@ -1,3 +1,7 @@
+import Model
+
+cadastro = Model.cadastro()
+
 class Anime:
 
 
@@ -29,9 +33,9 @@ class Anime:
 		if self.print_resenha:
 			print(self.resenha)
 
-	def editar_anime(self):
-		if (Usurio.validar("adiministrador") == True):
-			pass
+        def formatador_anime(self):
+                self.formatado = (f"{self.nome};;{self.status};;{self.Qt_ep};;{self.autor};;{self.resenha};;{self.temporadas};;{self.avaliacao};;\n")
+                cadastro.anime(self.formatado)
 
 
 class Episodeo:
