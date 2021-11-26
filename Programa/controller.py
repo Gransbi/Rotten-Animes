@@ -68,9 +68,9 @@ class Usurio:
 				return True
 
 			else:
-				print("Sua senha esta invalida.")
+				print("A senha informada é invalida.")
 		else:
-			print("Seu login não existe.")
+			print("O login informado é invalido.")
 			return False
 
 	def validar(self, escolha):
