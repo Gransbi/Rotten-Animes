@@ -1,6 +1,9 @@
+from Programa.telas import Tela
 import telas
 import controller
 import Model
+
+from controller import Anime
 
 telas = telas.Tela
 tratamento = controller.Tratamento
@@ -43,14 +46,7 @@ while True:
 				break
 
 
-		if (int(comando) == 6):
-			pass
-		if (int(comando) == 7):
-			pass
-		if (int(comando) == 8):
-			pass
-		if (int(comando) == 9):
-			pass
+
 
 		
 	if (int(comando) == 2):
@@ -88,8 +84,22 @@ while True:
 
 	if (int(comando) == 4):
 		pesquisa = str(input(""))
-		if (pesquisa in banco.itens()):
-			pass
+		if (pesquisa in banco):
+			dados = tratamento.format_anime()
+
+			anime = Anime()
+			anime.nome = dados[0]
+			anime.status = dados[1]
+			anime.Qt_ep = dados[2]
+			anime.autor = dados[3]
+			anime.resenha = dados[4]
+			anime.temporadas = dados[5]
+			anime.avaliacao = dados[6]
+			anime.avaliacao_list = dados[7]
+
+			controller.Anime.print_anime()
+
+
 
 
 	if (((usuario.validar("coneccao") and usuario.validar("adiministrador")) == True) and int(comando) == 5):

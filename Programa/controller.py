@@ -1,4 +1,6 @@
 import Model
+import telas
+
 
 cadastro = Model.cadastro()
 
@@ -29,10 +31,12 @@ class Anime:
 			print("mambro comum")
     
 
-	def print_resenha(self, opção):
-		if self.print_resenha:
-			print(self.resenha)
-
+	def print_anime(self):
+                telas.Tela.exposicao_anime(self.nome, self.status, self.Qt_ep, self.autor, self.resenha, self.temporadas, self.avaliacao, self.avaliacao_list)
+                
+	
+        
+        
         def formatador_anime(self):
                 self.formatado = (f"{self.nome};;{self.status};;{self.Qt_ep};;{self.autor};;{self.resenha};;{self.temporadas};;{self.avaliacao};;\n")
                 cadastro.anime(self.formatado)
@@ -106,25 +110,18 @@ class Tratamento:
 			return False
 
 		
-	def format_anime(lista_anime):
-		
-		nome = lista_anime[0]
-		status = lista_anime[1]
-		Qt_ep = lista_anime[2]
-		autor = lista_anime[3]
-		resenha  = lista_anime[4]
-		temporadas = lista_anime[5]
-		avaliacao = lista_anime[6]
-		avaliacao_list = lista_anime[7]
-		
-		anime_formatado = (nome, status, Qt_ep, autor, resenha, temporadas, avaliacao, avaliacao_list)
-		
-		return anime_formatado
-	
-	
+	def format_anime(nome_anime, banco_dados):
+		if nome_anime in banco_dados:
+			nome = nome_anime
+			status = banco_dados[nome_anime]["Status"]
+			Qt_ep = banco_dados[nome_anime]["QT_ep"]
+			autor = banco_dados[nome_anime]["Autor"]
+			resenha = banco_dados[nome_anime]["Resenha"]
+			temporadas = banco_dados[nome_anime]["Temporadas"]
+			avaliacao = banco_dados[nome_anime]["Avaliação"]
+			avaliacao_list = banco_dados[nome_anime]["Avaliação lista"]
 
-
-
+		return (nome, status, Qt_ep, autor, resenha, temporadas, avaliacao, avaliacao_list)
 
 
 

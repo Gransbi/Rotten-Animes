@@ -16,11 +16,11 @@ class Leitura:
 			
 			anime = {line_banco[0]:{"Status":line_banco[1],"Qt_ep":line_banco[2],"Autor": line_banco[3], 
 			"Resenha":line_banco[4], "Temporadas":line_banco[5],"Avaliação":line_banco[6],"Avaliação lista": line_banco[7]}}
+			
 
-			lista_anime = [line_banco[0], line_banco[1], line_banco[2], line_banco[3], line_banco[4], line_banco[5], line_banco[6], line_banco[7]]
 
 		arquivo.close()
 
-		return anime, lista_anime
+		return anime
 
 	

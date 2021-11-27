@@ -16,13 +16,14 @@ email = ("|EMAIL:    |")
 password = ("|PASSWORD: |")
 cadastro = ("|cadastre-se|")
 #para a tela do anime
-nome = ("NOME:")
-status = ("status: ")
-episodios = ("episodios: ")
-autor  = ("autor: ")
-genero = ("genero: ")
-relacionados = ("relacionados: ")
-resenha = ("resenha: ")
+nome_str = ("NOME:")
+status_str = ("status: ")
+episodios_str = ("episodios: ")
+autor_str  = ("autor: ")
+temporadas_str = ("quantidade de temporadas: ")
+avaliacao_str = ("avaliação: ")
+
+resenha_str = ("resenha: ")
 
 class Tela:
 
@@ -71,26 +72,23 @@ class Tela:
         "\033[7;40m\n{}".format(101 * " "),
         )
 
-    def exposicao_anime():
+    def exposicao_anime(nome, status, Qt_ep, autor, resenha, temporadas, avaliacao, avaliacao_list):
         print("\033[7;31m{}\033[m".format(ROTTEN_A.ljust(50)), "\033[7;40m{}\033[m".format(top_bar.rjust(50)),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(nome.center(100)),
+        "\033[7;40m\n{} {}".format(nome_str, nome).center(100),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(status.ljust(100)),
+        "\033[7;40m\n{} {}".format(status_str, status).ljust(100),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(episodios.ljust(100)),
+        "\033[7;40m\n{}".format(temporadas_str, temporadas).ljust(100),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(autor.ljust(100)),
+        "\033[7;40m\n{} {}".format(autor_str, autor).ljust(100),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(genero.ljust(100)),
+        "\033[7;40m\n{}".format(episodios_str, Qt_ep).ljust(100),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(relacionados.ljust(100)),
+        "\033[7;40m\n{} {}".format(avaliacao_str, avaliacao).ljust(100),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(relacionados.ljust(100)),
+        "\033[7;40m\n{}".format(resenha_str).ljust(100),
         "\033[7;40m\n{}".format(espacos_100),
-        "\033[7;40m\n{}".format(resenha.center(100)),
+        "\033[7;40m\n{}".format(resenha).center(100)),
         "\033[7;40m\n{}".format(espacos_100),
         "\033[7;40m\n{}".format(101 * " ")
-        )
-
-
