@@ -5,7 +5,7 @@ cadastro = Model.cadastro()
 class Anime:
 
 
-	def __init__(self, nome,status, Qt_ep, autor, relacionados, resenha, temporadas, avaliacao = 0, avaliacao_list = []):
+	def __init__(self, nome,status, Qt_ep, autor, resenha, temporadas, avaliacao = 0, avaliacao_list = []):
 		self.nome = nome
 		self.status = status
 		self.Qt_ep = Qt_ep
@@ -104,6 +104,27 @@ class Tratamento:
 
 		else:
 			return False
+
+		
+	def format_anime(lista_anime):
+		
+		nome = lista_anime[0]
+		status = lista_anime[1]
+		Qt_ep = lista_anime[2]
+		autor = lista_anime[3]
+		resenha  = lista_anime[4]
+		temporadas = lista_anime[5]
+		avaliacao = lista_anime[6]
+		avaliacao_list = lista_anime[7]
+		
+		anime_formatado = (nome, status, Qt_ep, autor, resenha, temporadas, avaliacao, avaliacao_list)
+		
+		return anime_formatado
+	
+	
+
+
+
 
 
 
