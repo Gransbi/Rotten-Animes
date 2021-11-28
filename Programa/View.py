@@ -1,3 +1,4 @@
+from Programa.Model import Cadastrar
 from Programa.telas import Tela
 import telas
 import controller
@@ -79,8 +80,8 @@ while True:
 			
 
 			if (usuario.validar("adiministrador") == True):
-				pass
-		
+                                pass
+	
 
 	if (int(comando) == 4):
 		pesquisa = str(input(""))
@@ -103,7 +104,33 @@ while True:
 
 
 	if (((usuario.validar("coneccao") and usuario.validar("adiministrador")) == True) and int(comando) == 5):
-		# Cadastrar anime
-		pass
+                edit = input(str("Deseja fazer alterações no nime?(S ou N):\n"))
+                if edit == "N":
+                        continue
+                elif edit == "S":
+                        anime = input(str("Nome do anime para atualização: \n"))
+                        print("escreva o item que deseja editar ou SAIR para encerrar a edição\n")
+                        escolha  = ""
+                        while escolha != "SAIR":
+                                escolha  = input(str("status, Qt_ep, autor, resenha, temporadas, avaliação"))
 
-	
+                                if escolha == "status":
+                                        status = input(str("Novo status: "))
+                                elif escolha == "Qt_ep":
+                                        Qt_ep = input(str("Nova Quantidade de episodios: "))
+                                elif escolha == "autor":
+                                        autor = input("Editar nome do(a) Autor(a): ")
+                                elif escolha == "resenha": 
+                                        resenha = input("editar resenha: ")
+                                elif escolha == "temporadas":
+                                        temporadas = input(str("Editar temporadas: "))
+                                elif escolha == "avaliação":
+                                        avaliacao = input(str("nova avaliação: "))
+                                elif escolha == "avaliação_lista":
+                                        avaliacao_lista = input(str("nova avaliação: "))
+                                elif escolha == "SAIR":
+                                        continue
+
+                        anime_csv = (f'{anime} = ({anime};; {status};; {Qt_ep};; {autor};;{resenha};;{temporadas};;{avaliacao};;{avaliacao};;{avaliacao_lista})')
+                        Cadastrar.anime(anime)
+                        
