@@ -32,13 +32,13 @@ class Anime:
     
 
 	def print_anime(self):
-                telas.Tela.exposicao_anime(self.nome, self.status, self.Qt_ep, self.autor, self.resenha, self.temporadas, self.avaliacao, self.avaliacao_list)
+                telas.Tela.exposicao_anime(self.nome, self.status, self.Qt_ep, self.autor, self.resenha, self.temporadas, self.avaliacao)
                 
 	
         
         
         def formatador_anime(self):
-                self.formatado = (f"{self.nome};;{self.status};;{self.Qt_ep};;{self.autor};;{self.resenha};;{self.temporadas};;{self.avaliacao};;\n")
+                self.formatado = (f"{self.nome};;{self.status};;{self.Qt_ep};;{self.autor};;{self.resenha};;{self.temporadas};;{self.avaliacao};;{self.avaliacao_list};;\n")
                 cadastro.anime(self.formatado)
 
 

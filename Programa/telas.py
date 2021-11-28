@@ -72,7 +72,7 @@ class Tela:
         "\033[7;40m\n{}".format(101 * " "),
         )
 
-    def exposicao_anime(nome, status, Qt_ep, autor, resenha, temporadas, avaliacao, avaliacao_list):
+    def exposicao_anime(nome, status, Qt_ep, autor, resenha, temporadas, avaliacao):
         print("\033[7;31m{}\033[m".format(ROTTEN_A.ljust(50)), "\033[7;40m{}\033[m".format(top_bar.rjust(50)),
         "\033[7;40m\n{}".format(espacos_100),
         "\033[7;40m\n{} {}".format(nome_str, nome).center(100),
